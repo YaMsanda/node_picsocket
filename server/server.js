@@ -42,3 +42,10 @@ io.on('connection', function (socket) {
 });
 
 http.listen(port, () => { console.log(`PicSocket currently running on port: ${port}`) })
+
+/*
+Ressources utilisées :
+    StackOverflow
+    CSS-Tricks.com
+    https://github.com/mmarcon/node-chat
+*/
