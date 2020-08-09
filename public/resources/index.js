@@ -1,11 +1,16 @@
 var socket = io.connect()
 
-//Socket event
-socket.on('new picture', pic)
+//Socket events
+socket.on('new picture', addPic)
+socket.on('delete picture', deletePic)
 
 //Append picture function
-function pic(base64Image) {
-    $('#gallery').append($('<img src="' + base64Image + '"/>'))
+function addPic(base64Image, id) {
+    $('#gallery').append($('<div id="'+id+'"><div id="'+id+'" class="deleteBtn">X</div><img src="' + base64Image + '"/></div>'))
+}
+
+function deletePic(id){
+    $('#'+id).remove()
 }
 
 $(function () {
@@ -20,4 +25,8 @@ $(function () {
             reader.readAsDataURL(data)
         }
     })
+    $(".deleteBtn").click(function(){
+        console.log($(this).attr('id'))
+        socket.emit('delete picture', $(this).attr('id'))
+    });
 })

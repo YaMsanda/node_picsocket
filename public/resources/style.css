@@ -93,6 +93,18 @@ header h1 {
 /*GALLERY - END*/
 
 /*BUTTON - START*/
+.deleteBtn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+img:hover .deleteBtn {
+    display:block;
+}
+
 #githubBtn{
     left: 90%;
     top: 20%;
