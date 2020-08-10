@@ -6,11 +6,12 @@ socket.on('delete picture', deletePic)
 
 //Append picture function
 function addPic(base64Image, id) {
-    $('#gallery').append($('<div id="' + id + '" class="container"><div class="overlay overlayFade"><button id="' + id + '" class="deleteBtn">X</button></div><img src="' + base64Image + '"/></div>')).fadeIn(2000)
+    let pic = '<div id="' + id + '" class="container"><div class="overlay overlayFade"><button id="' + id + '" class="deleteBtn">X</button></div><img src="' + base64Image + '"/></div>'
+    $(pic).appendTo('#gallery').effect('slide',1500)
 }
 //Delete picture from html function
 function deletePic(id) {
-    $('#' + id).remove().fadeOut(5000)
+    $('#' + id).hide('slow', function(){ this.remove() })
 }
 
 $(function () {
