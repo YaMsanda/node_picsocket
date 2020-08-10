@@ -1,7 +1,5 @@
-/* TODO :                           !! enlever éventuels var dans le code !!
- * Suppresion d'image
-    * Nouvel évènement socket : delete picture
-    * Give pictures Ids ?
+/* TODO : 
+    !! enlever éventuels var dans le code !!
  */
 
 /* BONUS :
@@ -9,10 +7,7 @@
     * Donner une durée de vie paramétrable aux images
  * Belle IHM
     * Gallery
-        * Bouton Delete
         * Animation ?
-    * Input
-        * Zone glisser-déposer
  */
 const path = require('path')
 const express = require('express')
@@ -20,6 +15,8 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
+
+//Id generator
 let idInc = 0
 function getId(){
     idInc++
@@ -41,7 +38,6 @@ io.on('connection', function (socket) {
         io.emit('new picture', pic, getId());
     });
     socket.on('delete picture', function (id) {
-        console.log(id)
         io.emit('delete picture', id);
     });
 });
