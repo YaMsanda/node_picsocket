@@ -40,6 +40,10 @@ io.on('connection', function (socket) {
     socket.on('new picture', function (pic) {
         io.emit('new picture', pic, getId());
     });
+    socket.on('delete picture', function (id) {
+        console.log(id)
+        io.emit('delete picture', id);
+    });
 });
 
 http.listen(port, () => { console.log(`PicSocket currently running on port: ${port}`) })

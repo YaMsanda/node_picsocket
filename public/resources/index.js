@@ -6,7 +6,7 @@ socket.on('delete picture', deletePic)
 
 //Append picture function
 function addPic(base64Image, id) {
-    $('#gallery').append($('<div id="'+id+'"><div id="'+id+'" class="deleteBtn">X</div><img src="' + base64Image + '"/></div>'))
+    $('#gallery').append($('<div id="'+id+'"><button id="'+id+'" class="deleteBtn">X</button><img src="' + base64Image + '"/></div>'))
 }
 
 function deletePic(id){
@@ -25,8 +25,9 @@ $(function () {
             reader.readAsDataURL(data)
         }
     })
-    $(".deleteBtn").click(function(){
-        console.log($(this).attr('id'))
-        socket.emit('delete picture', $(this).attr('id'))
-    });
+    
+})
+$(document).on('click', '.deleteBtn', function() {
+    console.log(this.id)
+    socket.emit('delete picture', this.id)
 })

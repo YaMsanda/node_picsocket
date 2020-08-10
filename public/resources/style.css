@@ -95,10 +95,10 @@ header h1 {
 /*BUTTON - START*/
 .deleteBtn {
     display: inline-block;
-    width: 20px;
+    /* width: 20px;
     height: 20px;
     background-color: #000;
-    color: #fff;
+    color: #fff; */
 }
 
 img:hover .deleteBtn {
