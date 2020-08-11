@@ -6,3 +6,8 @@ A NodeJs project with the following obejctive :
 I used express, socket.io and jquery for the most part.
 
 All development is made in 'dev' branch and clean builds merged into 'master'.
+
+How to run : 
+download and go to folder's root
+npm start
+go to localhost:3000 in your browser
