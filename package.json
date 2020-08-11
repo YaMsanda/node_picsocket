@@ -4,10 +4,12 @@
     "description": "",
     "main": "server.js",
     "dependencies": {
+        "bufferutil": "^4.0.1",
         "express": "^4.17.1",
         "http": "0.0.1-security",
         "path": "^0.12.7",
-        "socket.io": "^2.3.0"
+        "socket.io": "^2.3.0",
+        "utf-8-validate": "^5.0.2"
     },
     "devDependencies": {},
     "scripts": {
