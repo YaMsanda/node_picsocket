@@ -17,6 +17,7 @@ function getId(){
 
 //Path used to serve index.html
 const publicPath = path.join(__dirname, '/../public')
+//Path used to get resource files
 app.use('/resources', express.static(__dirname + '/../public/resources'));
 
 //Default route
