@@ -1,14 +1,6 @@
-/* TODO : 
-    !! enlever éventuels var dans le code !!
- */
+//Picksocket : Yamsanda
+//https://github.com/YaMsanda/node_picsocket
 
-/* BONUS :
- * Images en BDD
-    * Donner une durée de vie paramétrable aux images
- * Belle IHM
-    * Gallery
-        * Animation ?
- */
 const path = require('path')
 const express = require('express')
 const app = express();
@@ -49,4 +41,5 @@ Ressources utilisées :
     StackOverflow
     CSS-Tricks.com
     https://github.com/mmarcon/node-chat
+    https://favicon.io/
 */
